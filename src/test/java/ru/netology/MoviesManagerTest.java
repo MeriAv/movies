@@ -1,14 +1,16 @@
 package ru.netology;
+
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 
-public class MovieManagerTest {
+public class MoviesManagerTest {
 
-    public class MovieManagerTestNonEmpty {
+    public class MoviesManagerTestNonEmpty {
         @Test
         public void shouldRemoveIMovie() {
-            MovieManager manager = new MovieManager();
+            MoviesManager manager = new MoviesManager();
             int idToRemove = 1;
             Movies first = new Movies(1);
             Movies second = new Movies(2);
@@ -20,14 +22,14 @@ public class MovieManagerTest {
             manager.removeById(idToRemove);
 
             Movies[] actual = manager.getAll();
-            MovieManager[] expected = new MovieManager[]{2,3};
+            int[] expected = new int[]{2, 3};
 
-            assertArrayEquals(expected, actual);
+            assertArrayEquals(new int[][]{expected}, new Movies[][]{actual});
         }
 
         @Test
-        public void shouldGet10Movies(){
-            MovieManager manager = new MovieManager();
+        public void shouldGet10Movies() {
+            MoviesManager manager = new MoviesManager();
             Movies one = new Movies(1);
             Movies two = new Movies(2);
             Movies three = new Movies(3);
@@ -40,17 +42,17 @@ public class MovieManagerTest {
             Movies ten = new Movies(10);
             Movies test = new Movies(11);
 
-            Movies[] expected= manager.get10();
-            Movies[] actual = new Movies[]{1,2,3,4,5,6,7,8,9,10};
-            assertArrayEquals(expected, actual);
+            Movies[] expected = manager.get10();
+            int[] actual = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+            assertArrayEquals(expected, new int[][]{actual});
         }
-        @Test
-        public void shouldAddMovie(){
-            MovieManager manager = new MovieManager();
-            Movies one = new Movies(1);
 
-            Movies[] expected= manager.add();
-            Movies[] actual = MovieManager.lenght(2);
+        @Test
+        public void shouldAddMovie() {
+            MoviesManager manager = new MoviesManager();
+            Movies first = new Movies(1);
+            Movies[] expected = manager.add(first);
+            Movies[] actual = MoviesManager.length(2);
             assertArrayEquals(expected, actual);
         }
 

@@ -1,4 +1,5 @@
 package ru.netology;
+
 public class Movies {
     private int name;
     private int genre;

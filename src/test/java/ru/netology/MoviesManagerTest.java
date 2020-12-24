@@ -1,5 +1,6 @@
 package ru.netology;
 
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -7,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MoviesManagerTest {
 
-    public class MoviesManagerTestNonEmpty {
+
         @Test
         public void shouldRemoveIMovie() {
             MoviesManager manager = new MoviesManager();
@@ -57,4 +58,3 @@ public class MoviesManagerTest {
         }
 
     }
-}

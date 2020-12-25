@@ -8,10 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MovieManagerTest {
 
-
+    MovieManager manager = new MovieManager();
     @Test
     public void shouldAGetFilmsNorm() {
-        MovieManager manager = new MovieManager();
+
         Movie first = new Movie(1);
         Movie second = new Movie(2);
         Movie third = new Movie(3);
@@ -41,7 +41,7 @@ public class MovieManagerTest {
 
     @Test
     public void shouldAGetFilmsUnder() {
-        MovieManager manager = new MovieManager();
+
         Movie first = new Movie(1);
         Movie second = new Movie(2);
         Movie third = new Movie(3);
@@ -57,7 +57,7 @@ public class MovieManagerTest {
 
     @Test
     public void shouldAGetFilmsOver() {
-        MovieManager manager = new MovieManager();
+
         Movie first = new Movie(1);
         Movie second = new Movie(2);
         Movie third = new Movie(3);

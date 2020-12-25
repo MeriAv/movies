@@ -9,6 +9,16 @@ public class Movie {
     private int data;
     private int maxFilms;
 
+    public int getMinFilms() {
+        return minFilms;
+    }
+
+    public void setMinFilms(int minFilms) {
+        this.minFilms = minFilms;
+    }
+
+    private int minFilms;
+
     public Movie(int id) {
         this.id = id;
     }

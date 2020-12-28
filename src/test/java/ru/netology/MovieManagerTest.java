@@ -34,7 +34,7 @@ public class MovieManagerTest {
         manager.add(ninth);
         manager.add(tenth);
 
-        Movie[] actual = manager.getAll(10);
+        Movie[] actual = manager.getAll();
         Movie[] expected = new Movie[]{first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth};
         assertArrayEquals(actual, expected);
     }
@@ -50,7 +50,7 @@ public class MovieManagerTest {
         manager.add(second);
         manager.add(third);
 
-        Movie[] actual = manager.getAll(10);
+        Movie[] actual = manager.getAll();
         Movie[] expected = new Movie[]{first, second, third};
         assertArrayEquals(actual, expected);
     }
@@ -80,8 +80,10 @@ public class MovieManagerTest {
         manager.add(ninth);
         manager.add(tenth);
         manager.add(eleventh);
-        Movie[] actual = manager.getAll(10);
+        Movie[] actual = manager.getAll();
         Movie[] expected = new Movie[]{first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth};
         assertArrayEquals(actual, expected);
     }
+
+
 }

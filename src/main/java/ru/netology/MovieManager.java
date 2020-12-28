@@ -15,19 +15,20 @@ public class MovieManager {
         films = tmp;
     }
 
-    public Movie[] getAll(int maxFilms) {
+    public Movie[] getAll() {
         Movie[] result = new Movie[films.length];
-        int length = films.length;
-        if (length > maxFilms) {
-            length = maxFilms;
+        int maxFilms = result.length;
+        if (maxFilms > 10) {
+            maxFilms = 10;
         }
-        for ( int i = 0; i < length; i++ ) {
-            int index = result.length - i - 1;
+        // перебираем массив в прямом порядке
+        // но кладём в результаты в обратном
+        for ( int i = 0; i < maxFilms; i++ ) {
+            int index = films.length - i - 1;
             result[i] = films[index];
-           }
-        result = new Movie[films.length];
+        }
         return result;
     }
-};
+}
 
 

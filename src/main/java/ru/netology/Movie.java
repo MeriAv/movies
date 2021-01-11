@@ -1,5 +1,5 @@
-package ru.netology;
 
+package ru.netology;
 
 public class Movie {
     private int id;

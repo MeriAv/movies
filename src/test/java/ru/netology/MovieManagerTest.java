@@ -1,4 +1,5 @@
 package ru.netology;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.Movie;
 import ru.netology.MovieManager;
@@ -68,7 +69,7 @@ public class MovieManagerTest {
         manager.add(tenth);
         manager.add(eleventh);
         Movie[] actual = manager.getAll();
-        Movie[] expected = new Movie[]{tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        Movie[] expected = new Movie[10];
         assertArrayEquals(actual, expected);
     }
 }

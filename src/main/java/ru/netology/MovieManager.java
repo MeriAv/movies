@@ -21,15 +21,12 @@ public class MovieManager {
             maxFilms = 10;
         }
         Movie[] result = new Movie[maxFilms];
-        // перебираем массив в прямом порядке
-        // но кладём в результаты в обратном
         for ( int i = 0; i < result.length; i++ ) {
             int index = films.length - i - 1;
             result[i] = films[index];
         }
         return result;
     }
-
 
 
 }

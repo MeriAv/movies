@@ -34,16 +34,17 @@ public class CartManager {
 
   // наивная реализация
   public void removeById(int id) {
-    int length = items.length - 1;
-    PurchaseItem[] tmp = new PurchaseItem[length];
     int index = 0;
     for (PurchaseItem item : items) {
-      if (item.getId() != id) {
-        tmp[index] = item;
-        index++;
+      if (item.getId() == id) {
+        int length = items.length - 1;
+        PurchaseItem[] tmp = new PurchaseItem[length];
+        System.arraycopy(items, 0, tmp, 0, index);
+        System.arraycopy(items, index + 1, tmp, index, length - index);
+        items = tmp;
+        return;
       }
+      index++;
     }
-    // меняем наши элементы
-    items = tmp;
   }
 }
